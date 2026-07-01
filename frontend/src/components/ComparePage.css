@@ -1,0 +1,225 @@
+.compare-page {
+  width: 100%;
+}
+
+/* Header */
+.compare-header {
+  text-align: center;
+  margin-bottom: 1.75rem;
+}
+
+.compare-sub {
+  max-width: 560px;
+  margin: 0.75rem auto 0;
+  color: var(--text-2, #8b9cb5);
+  font-size: 0.92rem;
+  line-height: 1.55;
+}
+
+/* Input form */
+.compare-form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1.1rem 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.compare-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.6rem;
+  flex: 1;
+  min-width: 0;
+}
+
+.compare-input-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.compare-input {
+  width: 130px;
+  padding: 0.7rem 0.9rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  outline: none;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.compare-input::placeholder {
+  color: #475569;
+  font-weight: 400;
+  letter-spacing: 0;
+}
+
+.compare-input:focus {
+  border-color: #10b981;
+  background: rgba(16, 185, 129, 0.06);
+}
+
+.compare-remove {
+  position: absolute;
+  right: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+  border-radius: 6px;
+  border: none;
+  background: rgba(244, 63, 94, 0.15);
+  color: #f43f5e;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.compare-remove:hover {
+  background: rgba(244, 63, 94, 0.28);
+}
+
+.compare-add {
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.55rem 0.85rem;
+  background: rgba(16, 185, 129, 0.1);
+  border: 1px dashed rgba(16, 185, 129, 0.4);
+  border-radius: 10px;
+  color: #10b981;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.compare-add:hover {
+  background: rgba(16, 185, 129, 0.18);
+}
+
+.compare-add:disabled,
+.compare-remove:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Metric table */
+.compare-table-card {
+  margin-bottom: 1.5rem;
+}
+
+.compare-table-scroll {
+  overflow-x: auto;
+  margin-top: 0.5rem;
+}
+
+.compare-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.compare-table th,
+.compare-table td {
+  padding: 0.7rem 0.9rem;
+  text-align: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  white-space: nowrap;
+}
+
+.compare-row-label {
+  text-align: left !important;
+  color: var(--text-2, #8b9cb5);
+  font-weight: 500;
+  font-size: 0.82rem;
+}
+
+.compare-col-head {
+  vertical-align: bottom;
+  padding-bottom: 0.9rem;
+}
+
+.compare-col-ticker {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.02em;
+}
+
+.compare-col-name {
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--text-2, #8b9cb5);
+  max-width: 160px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 auto;
+}
+
+.compare-col-head.is-winner {
+  position: relative;
+}
+
+.compare-col-head.is-winner .compare-col-ticker {
+  color: #10b981;
+}
+
+.compare-trophy {
+  color: #fbbf24;
+  margin-bottom: 0.25rem;
+}
+
+.compare-table tbody td {
+  color: #e2e8f0;
+  font-weight: 600;
+}
+
+.compare-table td.is-winner-col {
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.cell-pos {
+  color: #10b981 !important;
+}
+
+.cell-neg {
+  color: #f43f5e !important;
+}
+
+/* Verdict card */
+.compare-verdict {
+  position: relative;
+}
+
+.compare-winner-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(16, 185, 129, 0.15);
+  border: 1px solid rgba(16, 185, 129, 0.4);
+  color: #10b981;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.03em;
+  white-space: nowrap;
+}
+
+@media (max-width: 640px) {
+  .compare-input {
+    width: 100%;
+    flex: 1;
+  }
+  .compare-inputs {
+    width: 100%;
+  }
+}
